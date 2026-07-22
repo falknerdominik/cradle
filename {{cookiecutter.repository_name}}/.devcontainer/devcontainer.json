@@ -1,0 +1,26 @@
+{
+  "name": "Technical Initiative Documentation",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": "..",
+    "args": {
+      "QUARTO_VERSION": "1.9.38"
+    }
+  },
+  "remoteUser": "vscode",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "quarto.quarto",
+        "ms-python.python",
+        "ms-toolsai.jupyter",
+        "yzhang.markdown-all-in-one"
+      ],
+      "settings": {
+        "files.trimTrailingWhitespace": true,
+        "editor.formatOnSave": true
+      }
+    }
+  },
+  "postCreateCommand": "quarto check"
+}
