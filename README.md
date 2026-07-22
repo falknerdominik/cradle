@@ -5,16 +5,15 @@ A Cookiecutter starter for documentation about one technical initiative.
 ## Create a project
 
 ```bash
-cookiecutter /path/to/cradle
-```
-
-Cookiecutter prompts only for `repository_name` and creates the complete documentation structure in a folder with that name.
-
-For non-interactive use:
-
-```bash
-cookiecutter /path/to/cradle \
-  --no-input repository_name=my-initiative
+docker run --rm -it \
+  --user "$(id -u):$(id -g)" \
+  -e HOME=/tmp \
+  -v "$PWD:/work" \
+  -w /work \
+  ghcr.io/astral-sh/uv:debian \
+  uvx cookiecutter \
+    --checkout main \
+    https://codeberg.org/dominikfalkner/cradle.git
 ```
 
 ## Development container
