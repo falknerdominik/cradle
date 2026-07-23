@@ -1,0 +1,83 @@
+<mxfile host="Electron" agent="ChatGPT">
+  <diagram id="cradle-workflow" name="Page-1">
+    <mxGraphModel dx="1996" dy="1498" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" background="#07101F" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="team" parent="1" style="swimlane;html=1;startSize=32;horizontal=1;rounded=0;fillColor=#4A4A4A;swimlaneFillColor=#4A4A4A;strokeColor=#D0D0D0;fontColor=#FFFFFF;fontSize=16;fontStyle=1;collapsible=0;" value="&lt;font style=&quot;font-size: 22px;&quot;&gt;Team Discussion&lt;/font&gt;" vertex="1">
+          <mxGeometry height="380" width="740" x="410" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="review" parent="team" style="rhombus;whiteSpace=wrap;html=1;fillColor=#242424;strokeColor=#C8C8C8;fontColor=#FFFFFF;fontSize=16;align=center;verticalAlign=middle;spacing=8;" value="&lt;b&gt;Review the initiative&lt;/b&gt;" vertex="1">
+          <mxGeometry height="220" width="230" x="60" y="92.5" as="geometry" />
+        </mxCell>
+        <mxCell id="agenda" parent="team" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#242424;strokeColor=#C8C8C8;fontColor=#FFFFFF;fontSize=16;align=center;verticalAlign=middle;spacing=10;" value="&lt;b&gt;AGENDA&lt;/b&gt;&lt;br&gt;&lt;div style=&quot;text-align: left;&quot;&gt;1. Is the initiative still relevant and owned?&lt;br&gt;2. What must be resolved next?&lt;br&gt;3. Is research, a specification, or an ADR required?&lt;br&gt;4. What is the next action, and who owns it?&lt;br&gt;5. Does the initiative continue, pause, complete, or stop?¹&lt;/div&gt;" vertex="1">
+          <mxGeometry height="200" width="360" x="340" y="102.5" as="geometry" />
+        </mxCell>
+        <mxCell id="e-review-agenda" edge="1" parent="team" source="review" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#D0D0D0;strokeWidth=1.5;endArrow=none;entryX=0;entryY=0.5;exitX=1;exitY=0.5;" target="agenda">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="documents" parent="1" style="swimlane;html=1;startSize=32;horizontal=1;rounded=0;fillColor=#4A4A4A;swimlaneFillColor=#4A4A4A;strokeColor=#D0D0D0;fontColor=#FFFFFF;fontSize=16;fontStyle=1;collapsible=0;" value="&lt;font style=&quot;font-size: 22px;&quot;&gt;Create or update the required document&lt;/font&gt;" vertex="1">
+          <mxGeometry height="310" width="890" x="335" y="580" as="geometry" />
+        </mxCell>
+        <mxCell id="update" parent="documents" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#242424;strokeColor=#C8C8C8;fontColor=#FFFFFF;fontSize=16;align=center;verticalAlign=middle;spacing=8;" value="Update README&lt;br&gt;and initiative" vertex="1">
+          <mxGeometry height="95" width="210" x="340" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="1sbHhF6M8xqYnpy4A7m5-2" edge="1" parent="documents" source="research" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#FFFFFF;" target="update">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="research" parent="documents" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#242424;strokeColor=#C8C8C8;fontColor=#FFFFFF;fontSize=16;align=center;verticalAlign=middle;spacing=8;" value="&lt;b&gt;Research Note&lt;/b&gt;&lt;br&gt;Validate assumptions" vertex="1">
+          <mxGeometry height="85" width="220" x="65" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="1sbHhF6M8xqYnpy4A7m5-1" edge="1" parent="documents" source="adr" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#FFFFFF;" target="update">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="adr" parent="documents" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#242424;strokeColor=#C8C8C8;fontColor=#FFFFFF;fontSize=16;align=center;verticalAlign=middle;spacing=8;" value="&lt;b&gt;ADR&lt;/b&gt;&lt;br&gt;Make a technical decision" vertex="1">
+          <mxGeometry height="85" width="250" x="605" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="spec" parent="documents" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#242424;strokeColor=#C8C8C8;fontColor=#FFFFFF;fontSize=16;align=center;verticalAlign=middle;spacing=8;" value="&lt;b&gt;Specification&lt;/b&gt;&lt;br&gt;Define required behavior" vertex="1">
+          <mxGeometry height="85" width="250" x="320" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e-spec-update" edge="1" parent="documents" source="spec" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#D0D0D0;strokeWidth=1.5;endArrow=block;endFill=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitDx=0;exitDy=0;" target="update">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="start" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#242424;strokeColor=#C8C8C8;fontColor=#FFFFFF;fontSize=16;align=center;verticalAlign=middle;spacing=8;" value="Write initial proposal" vertex="1">
+          <mxGeometry height="90" width="170" x="140" y="225" as="geometry" />
+        </mxCell>
+        <mxCell id="close" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#242424;strokeColor=#C8C8C8;fontColor=#FFFFFF;fontSize=16;align=center;verticalAlign=middle;spacing=8;" value="Record final status, reason,&lt;br&gt;and outcome in the&lt;br&gt;README" vertex="1">
+          <mxGeometry height="110" width="250" x="1250" y="215" as="geometry" />
+        </mxCell>
+        <mxCell id="e-team-close" edge="1" parent="1" source="team" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#D0D0D0;strokeWidth=1.5;fontColor=#FFFFFF;fontSize=14;labelBackgroundColor=#07101F;endArrow=block;endFill=1;entryX=0;entryY=0.5;exitX=1;exitY=0.5;" target="close" value="&lt;font style=&quot;font-size: 22px;&quot;&gt;Close&lt;/font&gt;">
+          <mxGeometry relative="1" x="-0.0579" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-team-docs" edge="1" parent="1" source="team" style="curved=1;html=1;strokeColor=#D0D0D0;strokeWidth=1.5;fontColor=#FFFFFF;fontSize=14;labelBackgroundColor=#07101F;endArrow=block;endFill=1;exitX=0.85;exitY=1;entryX=0.85;entryY=0;" target="documents" value="&lt;font style=&quot;font-size: 22px;&quot;&gt;Define document&lt;/font&gt;">
+          <mxGeometry relative="1" x="0.2692" y="3" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="1125" y="500" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-docs-team" edge="1" parent="1" source="documents" style="curved=1;html=1;strokeColor=#D0D0D0;strokeWidth=1.5;fontColor=#FFFFFF;fontSize=14;labelBackgroundColor=#07101F;endArrow=block;endFill=1;exitX=0.15;exitY=0;entryX=0.22;entryY=1;" target="team" value="&lt;font style=&quot;font-size: 22px;&quot;&gt;Review document&lt;/font&gt;">
+          <mxGeometry relative="1" x="0.0494" y="-30" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="455" y="500" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="footnote" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#BFC7D5;fontSize=12;" value="&lt;font style=&quot;font-size: 17px;&quot;&gt;¹ Repeated postponement without an owner, progress, or a concrete next step should result in the initiative being closed.&lt;/font&gt;" vertex="1">
+          <mxGeometry height="25" width="955" x="335" y="910" as="geometry" />
+        </mxCell>
+        <mxCell id="1sbHhF6M8xqYnpy4A7m5-4" edge="1" parent="1" source="start" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#D0D0D0;strokeWidth=1.5;fontColor=#FFFFFF;fontSize=14;labelBackgroundColor=#07101F;endArrow=block;endFill=1;entryX=0;entryY=0.5;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryDx=0;entryDy=0;" target="team" value="&lt;font style=&quot;font-size: 22px;&quot;&gt;Open&lt;/font&gt;">
+          <mxGeometry relative="1" x="-0.0579" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="1290" y="310" as="sourcePoint" />
+            <mxPoint x="1480" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -4,6 +4,21 @@
 
 Describe what is being proposed.
 
+## Status
+
+`Proposed`
+
+## Ownership
+
+- Initiative owner:
+- Responsible team:
+- Stakeholders:
+
+## Review
+
+- Last reviewed:
+- Next review:
+
 ## Problem or Opportunity
 
 Describe the problem or opportunity this initiative addresses and why it matters.
@@ -37,3 +52,8 @@ Describe the intended outcome.
 ## Success Criteria
 
 - [ ] Add a measurable success criterion.
+
+## Related Documents
+
+- [SPEC-0001: System overview](specs/SPEC-0001-system-overview.md)
+- [TODO-0001: Initial validation](todos/TODO-0001-initial-validation.md)
