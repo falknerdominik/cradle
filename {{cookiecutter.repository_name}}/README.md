@@ -1,4 +1,4 @@
-# {{ cookiecutter.repository_name | replace('-', ' ') | replace('_', ' ') | title }}
+# {{ cookiecutter.project_name | title }}
 
 Documentation for one technical initiative.
 

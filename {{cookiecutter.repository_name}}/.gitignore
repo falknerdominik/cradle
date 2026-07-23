@@ -1,6 +1,13 @@
+# Quarto / Jupyter / Python
 .quarto/
 .ipynb_checkpoints/
 __pycache__/
 *.py[cod]
 .venv/
+
+# Rendered documents (Quarto writes these next to their source)
+*.pdf
+*.html
+
+# OS
 .DS_Store

@@ -1,3 +1,4 @@
 {
-  "repository_name": "my-initiative"
+  "project_name": "My Initiative",
+  "repository_name": "{{ cookiecutter.project_name | slugify }}"
 }

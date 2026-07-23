@@ -1,0 +1,52 @@
+name: Generate template
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  generate:
+    name: Verify the template generates a valid tree
+    runs-on: docker
+    container:
+      image: python:3.12-slim
+    steps:
+      - name: Check out the template
+        uses: actions/checkout@v4
+
+      - name: Install cookiecutter
+        run: python -m pip install --no-cache-dir cookiecutter
+
+      - name: Generate a project from the template
+        run: cookiecutter --no-input . -o generated
+
+      - name: Verify the expected files and folders exist
+        run: |
+          set -e
+          root="generated/my-initiative"
+
+          test -f "$root/README.md"
+          test -f "$root/CONVENTIONS.md"
+          test -f "$root/proposal.md"
+          test -f "$root/specs/SPEC-0001-system-overview.md"
+          test -f "$root/todos/TODO-0001-initial-validation.md"
+          test -f "$root/templates/adr.md"
+          test -f "$root/templates/research-note.md"
+          test -f "$root/templates/specification.md"
+          test -f "$root/templates/todo-list.md"
+          test -f "$root/.devcontainer/devcontainer.json"
+          test -f "$root/.devcontainer/Dockerfile"
+          test -f "$root/.gitignore"
+
+          test -d "$root/adrs"
+          test -d "$root/research"
+          test -d "$root/archive/adrs"
+          test -d "$root/archive/research"
+          test -d "$root/archive/specs"
+          test -d "$root/archive/todos"
+
+      - name: Verify the folder name was slugified with dashes
+        run: |
+          test -d "generated/my-initiative"
+          test ! -e "generated/My Initiative"
