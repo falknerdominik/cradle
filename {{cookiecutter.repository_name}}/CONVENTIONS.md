@@ -6,7 +6,28 @@ One documentation structure represents one technical initiative. Every document 
 
 This structure is documentation-only. It may be used as a standalone repository, inside an implementation repository, or within a monorepo.
 
-For the initiative workflow, lifecycle, and team review process, see the [Cradle README](https://codeberg.org/dominikfalkner/cradle/src/branch/main/README.md).
+## Team Review
+
+The team discussion is the control point for the initiative. Hold it when opening the initiative, when a document is ready for review, when work reaches a decision point, or when the initiative may need to pause or close.
+
+Use the following agenda:
+
+1. Is the initiative still relevant and owned?
+2. What must be resolved next?
+3. Is research, a specification, or an ADR required?
+4. What is the next action, and who owns it?
+5. Does the initiative continue, pause, complete, or stop?
+
+Each discussion must result in at least one of the following:
+
+* create or update a document;
+* create or update a todo;
+* assign a concrete next action and owner;
+* start or continue agreed work;
+* pause the initiative with a reason and next review date;
+* close the initiative with a final outcome.
+
+Repeated postponement without ownership, progress, or a concrete next step should result in the initiative being marked as `Abandoned`.
 
 ## Document Responsibilities
 
